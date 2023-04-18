@@ -22,24 +22,43 @@
 
 // console.log(bmi(200, 1.8))
 
-function remove (string) {
-  let str = ""
-  let count = 0
-  let parse = string.split(" ")
-  for (let i = 0; i < parse.length; i++) {
-    for (let j = 0; j < parse[i].length; j++){
-      if (parse[i][j] === "!"){
-        count++
-      }
-    }
-    if (str === ""){
-      str += (count === 1) ? ("") : parse[i]
-    } else {
-      str += count === 1 ? ("") : " " + parse[i]
-    }
-    count = 0;
-  }
-  return str;
-}
+// function remove (string) {
+//   let str = ""
+//   let count = 0
+//   let parse = string.split(" ")
+//   for (let i = 0; i < parse.length; i++) {
+//     for (let j = 0; j < parse[i].length; j++){
+//       if (parse[i][j] === "!"){
+//         count++
+//       }
+//     }
+//     if (str === ""){
+//       str += (count === 1) ? ("") : parse[i]
+//     } else {
+//       str += count === 1 ? ("") : " " + parse[i]
+//     }
+//     count = 0;
+//   }
+//   return str;
+// }
 
-console.log(remove("Hi Hi! Hi!"))
+// console.log(remove("Hi Hi! Hi!"))
+
+// let a = 2 + '2';
+// let b = 2 - '2';
+// console.log(a);
+// console.log(b);
+// console.log(typeof a);
+// console.log(typeof b);
+
+// const a = 3;
+// const x = (y) => {
+// y++;
+//   console.log(y);
+// };
+// x(a);
+
+var x=12;
+var y=8;
+var res=eval("x+y");
+console.log(res);
