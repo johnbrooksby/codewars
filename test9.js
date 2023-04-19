@@ -58,7 +58,10 @@
 // };
 // x(a);
 
-var x=12;
-var y=8;
-var res=eval("x+y");
-console.log(res);
+// var x=12;
+// var y=8;
+// var res=eval("x+y");
+// console.log(res);
+
+// console.log(Object.assign({ foo: 'bar'}, {bar: 'baz'}))
+
