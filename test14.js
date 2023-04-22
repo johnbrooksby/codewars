@@ -3,25 +3,42 @@
 //       return true
 //     } else if ((a[1] > b[1] && a[1] - b[1] > a[1]) || (b[1] > a[1] && b[1] - a[1] > b[1])){
 //       return true
-//     } 
+//     }
 //     return false;
 //   }
 
 //   console.log(quadrant_segment([9, 3], [-1, 6]))
 
-const greet = () => {
-  let str = "h"
-  str += "e"
-  for (let i = 1; i < 4; i++){
-    str += "l"
+// const greet = () => {
+//   let str = "h"
+//   str += "e"
+//   for (let i = 1; i < 4; i++){
+//     str += "l"
+//   }
+
+//   console.log(str)
+//   let str2 = str.slice(0, 4) + "o wor" + str.slice(4)
+//   let str3 = str2 + "d"
+//   str = "!"
+//   let finalstring = str3.concat(str)
+//   console.log(finalstring)
+// }
+
+// greet()
+
+function stepThroughWith(s) {
+  //You can't bring your code, but you can bring this comment
+  sArr = s.split(" ");
+  for (let i = 0; i < sArr.length - 1; i++) {
+    for (let j = 0; j < sArr[i].length; j++) {
+      if (sArr[i][j] === sArr[i][j + 1]) {
+        if(sArr[i].includes(',')){
+          return sArr[i].slice(0, -1);
+        }
+        return sArr[i]
+      }
+    }
   }
-  
-  console.log(str)
-  let str2 = str.slice(0, 4) + "o wor" + str.slice(4)
-  let str3 = str2 + "d"
-  str = "!"
-  let finalstring = str3.concat(str)
-  console.log(finalstring)
 }
 
-greet()
+console.log(stepThroughWith("You can take the tree or the wood, but not a branch"));
