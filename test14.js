@@ -26,19 +26,34 @@
 
 // greet()
 
-function stepThroughWith(s) {
-  //You can't bring your code, but you can bring this comment
-  sArr = s.split(" ");
-  for (let i = 0; i < sArr.length - 1; i++) {
-    for (let j = 0; j < sArr[i].length; j++) {
-      if (sArr[i][j] === sArr[i][j + 1]) {
-        if(sArr[i].includes(',')){
-          return sArr[i].slice(0, -1);
-        }
-        return sArr[i]
-      }
-    }
-  }
-}
+// function stepThroughWith(s) {
+//   //You can't bring your code, but you can bring this comment
+//   sArr = s.split(" ");
+//   for (let i = 0; i < sArr.length - 1; i++) {
+//     for (let j = 0; j < sArr[i].length; j++) {
+//       if (sArr[i][j] === sArr[i][j + 1]) {
+//         if(sArr[i].includes(',')){
+//           return sArr[i].slice(0, -1);
+//         }
+//         return sArr[i]
+//       }
+//     }
+//   }
+// }
 
-console.log(stepThroughWith("You can take the tree or the wood, but not a branch"));
+// console.log(stepThroughWith("You can take the tree or the wood, but not a branch"));
+
+function sumFactorial(arr){
+  let numArr = []
+  let num = 1
+  for (let j = 0; j < arr.length; j++){
+    for (let i = 0; i < arr[j] - 1; i++){
+      num *= arr[j] - i
+    }
+    numArr.push(num)
+    num = 1
+  }
+  return numArr.reduce((a,c) => {
+    return a + c
+  }, 0)
+}
