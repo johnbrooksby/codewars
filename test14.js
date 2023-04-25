@@ -43,17 +43,26 @@
 
 // console.log(stepThroughWith("You can take the tree or the wood, but not a branch"));
 
-function sumFactorial(arr){
-  let numArr = []
-  let num = 1
-  for (let j = 0; j < arr.length; j++){
-    for (let i = 0; i < arr[j] - 1; i++){
-      num *= arr[j] - i
-    }
-    numArr.push(num)
-    num = 1
-  }
-  return numArr.reduce((a,c) => {
-    return a + c
-  }, 0)
-}
+// function sumFactorial(arr){
+//   let numArr = []
+//   let num = 1
+//   for (let j = 0; j < arr.length; j++){
+//     for (let i = 0; i < arr[j] - 1; i++){
+//       num *= arr[j] - i
+//     }
+//     numArr.push(num)
+//     num = 1
+//   }
+//   return numArr.reduce((a,c) => {
+//     return a + c
+//   }, 0)
+// }
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+let filtered = arr.filter((num) => {
+  return num > 4
+})
+
+console.log(arr)
+console.log(filtered)
