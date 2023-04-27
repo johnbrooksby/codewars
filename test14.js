@@ -58,11 +58,26 @@
 //   }, 0)
 // }
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-let filtered = arr.filter((num) => {
-  return num > 4
-})
+// let filtered = arr.filter((num) => {
+//   return num > 4
+// })
 
-console.log(arr)
-console.log(filtered)
+// console.log(arr)
+// console.log(filtered)
+
+"use strict";
+
+function flattenAndSort(array) {
+  let newArray = []
+  for (let i = 0; i < array.length; i++){
+    for (let j = 0; j < array[i].length; j++) {
+      newArray.push(array[i][j])
+    }
+  }
+  newArray.sort((a,b) => a - b)
+  return newArray;
+}
+
+console.log(flattenAndSort([[1,3,2], [7,5,4,6]]))

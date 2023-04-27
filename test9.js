@@ -65,3 +65,21 @@
 
 // console.log(Object.assign({ foo: 'bar'}, {bar: 'baz'}))
 
+// const a = {
+//     firstName: 'Bill'
+//     };
+    
+//     const b = {
+//     firstName: 'Bill'
+//     };
+    
+//     console.log(a.firstName === b.firstName);
+
+const z = [[0],[1]];
+const x = [];
+for (let i = 0; i < z.length; i++) {
+const d = z[i];
+const v = d[0];
+x.push(v);
+}
+console.log(x);
