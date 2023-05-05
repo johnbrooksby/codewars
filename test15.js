@@ -56,11 +56,49 @@
 //   console.log(fireFight("Boat Rudder Mast Boat Hull Water Fire"))
 
 // This function works as is, but it is too slow to run with large input.  I need to find a way to do it faster
+// function maxSum(arr, range) {
+//   let blockArr = [];
+//   for (let i = 0; i < range.length; i++) {
+//     blockArr.push(
+//       arr.slice(range[i][0], range[i][1] + 1).reduce((a, c) => {
+//         return a + c;
+//       })
+//     );
+//   }
+//   return Math.max(...blockArr);
+// }
+
 function maxSum(arr, range) {
+  let newRange = range;
+  let test1 = -1;
+  if (range.length > 1) {
+    for (let i = 0; i < range.length; i++) {
+      for (let j = i + 1; j < newRange.length; j++) {
+        // console.log(range[i][0]);
+        // console.log(newRange[j][0]);
+        if (
+          range[i][0] <= newRange[j][0] &&
+          range[i][1] >= newRange[j][1] &&
+          test1 >= 0
+        ) {
+          test1 =
+            arr.slice(range[i][0], newRange[j][0] + 1).reduce((a, c) => {
+              return a + c;
+            }) +
+            arr.slice(newRange[j][1], range[i][1] + 1).reduce((a, c) => {
+              return a + c;
+            });
+          if (test1 >= 0) {
+            newRange.splice(j, 1);
+          }
+        }
+      }
+    }
+  }
   let blockArr = [];
-  for (let i = 0; i < range.length; i++) {
+  for (let i = 0; i < newRange.length; i++) {
     blockArr.push(
-      arr.slice(range[i][0], range[i][1] + 1).reduce((a, c) => {
+      arr.slice(newRange[i][0], newRange[i][1] + 1).reduce((a, c) => {
         return a + c;
       })
     );
@@ -69,15 +107,6 @@ function maxSum(arr, range) {
 }
 
 console.log(
-  maxSum(
-    [1, -2, 3, 4, -5, -4, 3, 2, 1, 5, 7, -3, 10],
-    [
-      [0, 4],
-      [1, 3],
-      [6, 11],
-      [0, 3],
-      [5, 7],
-      [7, 10],
-    ]
+  maxSum([1,-2,3,4,-5,-4,3,2,1],[[1,3]]
   )
 );
