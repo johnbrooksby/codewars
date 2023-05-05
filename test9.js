@@ -75,11 +75,15 @@
     
 //     console.log(a.firstName === b.firstName);
 
-const z = [[0],[1]];
-const x = [];
-for (let i = 0; i < z.length; i++) {
-const d = z[i];
-const v = d[0];
-x.push(v);
+// const z = [[0],[1]];
+// const x = [];
+// for (let i = 0; i < z.length; i++) {
+// const d = z[i];
+// const v = d[0];
+// x.push(v);
+// }
+// console.log(x);
+
+for (var i = 0; i < 3; i++) {
+    setTimeout(() => console.log(i), 1);
 }
-console.log(x);
