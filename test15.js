@@ -135,22 +135,31 @@
 
 // console.log(reverseVowels("abcdefioud"));
 
-var numberFormat = function (number) {
-  let count = 1
-  let num = []
-  for (let i = 0; i < number.toString().length; i++){
-    num.push(number.toString()[i])
-  }
-  console.log(num)
-  for (let i = num.length - 1; i > 1; i--){
-    console.log("number[i]", num[i])
-    count++
-    if (count === 3){
-      count = 0
-      num.splice(i - 1, 0, ",")
-    }
-  }
-  return num.join("")
-};
+// var numberFormat = function (number) {
+//   let count = 1
+//   let num = []
+//   for (let i = 0; i < number.toString().length; i++){
+//     num.push(number.toString()[i])
+//   }
+//   console.log(num)
+//   for (let i = num.length - 1; i > 1; i--){
+//     console.log("number[i]", num[i])
+//     count++
+//     if (count === 3){
+//       count = 0
+//       num.splice(i - 1, 0, ",")
+//     }
+//   }
+//   return num.join("")
+// };
 
-console.log(numberFormat(1234567))
+// console.log(numberFormat(1234567))
+
+
+const sumSquareEvenRootOdd = ns => {
+  let resArr = []
+  for (let i = 0; i < ns.length; i++){
+    resArr.push(ns[i] % 2 === 0 ? ns[i]**2 : ns[i]**.5)
+  }
+  return Math.round(resArr.reduce((a, c) => a + c) * 100) / 100
+};
