@@ -156,10 +156,20 @@
 // console.log(numberFormat(1234567))
 
 
-const sumSquareEvenRootOdd = ns => {
-  let resArr = []
-  for (let i = 0; i < ns.length; i++){
-    resArr.push(ns[i] % 2 === 0 ? ns[i]**2 : ns[i]**.5)
+// const sumSquareEvenRootOdd = ns => {
+//   let resArr = []
+//   for (let i = 0; i < ns.length; i++){
+//     resArr.push(ns[i] % 2 === 0 ? ns[i]**2 : ns[i]**.5)
+//   }
+//   return Math.round(resArr.reduce((a, c) => a + c) * 100) / 100
+// };
+
+function noIfsNoButs(a, b) {
+  while(a>b){
+   return `${a} is greater than ${b}`  
   }
-  return Math.round(resArr.reduce((a, c) => a + c) * 100) / 100
-};
+  while(b>a){
+      return `${a} is smaller than ${b}`
+  }
+  return `${a} is equal to ${b}`
+  }
