@@ -98,5 +98,7 @@
 //     }
 //     sayHi();
 
-    let str = "((((()(())()))))"
-    console.log(str.length)
+    // let str = "((((()(())()))))"
+    // console.log(str.length)
+
+    console.log(5++"6")
