@@ -177,16 +177,19 @@
 
 // console.log(capitalizeWord("word"))
 
+
 function transposeTwoStrings(array) {
-  for (
-    let i = 0;
-    i < (array[0].length > array[1].length ? array[0].length : array[1].length);
-    i++
-  ) {
-    console.log((array[0][i] ? array[0][i] : " ") + " " + (array[1][i] ? array[1][i] : " "));
+  let arr = "";
+  let len = Math.max(array[0].length, array[1].length);
+  for (let i = 0; i < len; i++) {
+    arr +=
+      (array[0][i] ? array[0][i] : " ") +
+      " " +
+      (array[1][i] ? array[1][i] : " ") +
+      (i === len - 1 ? "" : "\n");
   }
 
-  return;
+  return arr;
 }
 
-transposeTwoStrings(["hellowwww", "worldee"]);
+console.log(transposeTwoStrings(["he", "world"]));
