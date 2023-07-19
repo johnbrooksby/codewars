@@ -155,7 +155,6 @@
 
 // console.log(numberFormat(1234567))
 
-
 // const sumSquareEvenRootOdd = ns => {
 //   let resArr = []
 //   for (let i = 0; i < ns.length; i++){
@@ -164,12 +163,30 @@
 //   return Math.round(resArr.reduce((a, c) => a + c) * 100) / 100
 // };
 
-function noIfsNoButs(a, b) {
-  while(a>b){
-   return `${a} is greater than ${b}`  
+// function noIfsNoButs(a, b) {
+//   while(a>b){
+//    return `${a} is greater than ${b}`
+//   }
+//   while(b>a){
+//       return `${a} is smaller than ${b}`
+//   }
+//   return `${a} is equal to ${b}`
+//   }
+
+// const capitalizeWord = (word) =>word[0].toUpperCase() + word.slice(1);
+
+// console.log(capitalizeWord("word"))
+
+function transposeTwoStrings(array) {
+  for (
+    let i = 0;
+    i < (array[0].length > array[1].length ? array[0].length : array[1].length);
+    i++
+  ) {
+    console.log((array[0][i] ? array[0][i] : " ") + " " + (array[1][i] ? array[1][i] : " "));
   }
-  while(b>a){
-      return `${a} is smaller than ${b}`
-  }
-  return `${a} is equal to ${b}`
-  }
+
+  return;
+}
+
+transposeTwoStrings(["hellowwww", "worldee"]);
