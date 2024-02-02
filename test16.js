@@ -106,21 +106,31 @@
 // ); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]);
 
 
-function stringy(size) {
-  let string = ""
+// function stringy(size) {
+//   let string = ""
   
-  if (size > 1){  
-    for (let i = 0; i < size; i++){
-      if (i % 2 === 0){
-        string += "1"
-      } else {
-        string += "0"
-      }
-    }
-  } else {
-    string = "1"
-  }
-  return string
-}
+//   if (size > 1){  
+//     for (let i = 0; i < size; i++){
+//       if (i % 2 === 0){
+//         string += "1"
+//       } else {
+//         string += "0"
+//       }
+//     }
+//   } else {
+//     string = "1"
+//   }
+//   return string
+// }
 
-const breakChocolate = (n,m) => n * m > 1 ? (n * m) - 1 : 0
+// const breakChocolate = (n,m) => n * m > 1 ? (n * m) - 1 : 0
+
+
+console.log(020 == "20")
+console.log(21 == "21")
+console.log(19 == "19")
+console.log(018 == "18")
+console.log(17 == "17")
+console.log(16 == "16")
+console.log(15 == "15")
+console.log(14 == "14")
