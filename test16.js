@@ -124,13 +124,32 @@
 // }
 
 // const breakChocolate = (n,m) => n * m > 1 ? (n * m) - 1 : 0
+// let arr = []
 
+// console.log(arr.length)
 
-console.log(020 == "20")
-console.log(21 == "21")
-console.log(19 == "19")
-console.log(018 == "18")
-console.log(17 == "17")
-console.log(16 == "16")
-console.log(15 == "15")
-console.log(14 == "14")
+// console.log(isNaN("abc"))
+
+// Codewars Draw stairs
+function drawStairs(n) {
+    let count = 0
+    let space = ""
+    let output = ""
+    while (count < n){
+      if (n === 1){
+        return "I"
+      }
+      if (count === n - 1){
+          output = output + space + "I"
+      } else {
+          output = output + space + "I\n"
+      }
+      space += " "
+      count++
+    }
+    return output
+  }
+
+//   console.log(drawStairs(1))
+//   console.log(drawStairs(3))
+  console.log(drawStairs(5))
