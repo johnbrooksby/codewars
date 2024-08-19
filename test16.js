@@ -131,25 +131,45 @@
 // console.log(isNaN("abc"))
 
 // Codewars Draw stairs
-function drawStairs(n) {
-    let count = 0
-    let space = ""
-    let output = ""
-    while (count < n){
-      if (n === 1){
-        return "I"
-      }
-      if (count === n - 1){
-          output = output + space + "I"
-      } else {
-          output = output + space + "I\n"
-      }
-      space += " "
-      count++
-    }
-    return output
-  }
+// function drawStairs(n) {
+//     let count = 0
+//     let space = ""
+//     let output = ""
+//     while (count < n){
+//       if (n === 1){
+//         return "I"
+//       }
+//       if (count === n - 1){
+//           output = output + space + "I"
+//       } else {
+//           output = output + space + "I\n"
+//       }
+//       space += " "
+//       count++
+//     }
+//     return output
+//   }
 
 //   console.log(drawStairs(1))
 //   console.log(drawStairs(3))
-  console.log(drawStairs(5))
+//   console.log(drawStairs(5))
+
+// console.log('10' !== 10)
+
+
+
+// function stringClean(testString){
+    //     return (testString.replace(/\d/g, ""))
+    // }
+    
+function stringClean(){
+    let sample = "This looks5 grea8t!";
+    console.log (sample.replace(/\d/g, ""));
+  }
+stringClean()
+
+// let formula = 'c423 783; vt&Sq154 DmY834 HS989 K&AG495 qm989 OF955';
+// let reg = /[a-z!\s]/ig;
+// matches = formula.match(reg);
+
+// console.log(matches.toString().replace(/,/g, ""))
