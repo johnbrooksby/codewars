@@ -162,14 +162,69 @@
     //     return (testString.replace(/\d/g, ""))
     // }
     
-function stringClean(){
-    let sample = "This looks5 grea8t!";
-    console.log (sample.replace(/\d/g, ""));
-  }
-stringClean()
+// function stringClean(){
+//     let sample = "This looks5 grea8t!";
+//     console.log (sample.replace(/\d/g, ""));
+//   }
+// stringClean()
 
 // let formula = 'c423 783; vt&Sq154 DmY834 HS989 K&AG495 qm989 OF955';
 // let reg = /[a-z!\s]/ig;
 // matches = formula.match(reg);
 
 // console.log(matches.toString().replace(/,/g, ""))
+
+// console.log(undefined + 1)
+// console.log(null + 1)
+
+// function yearDays(year) {
+    // year % 4 === 0 ? (year % 100 === 0 ? (year % 400 === 0 ? `${year} has 366 days` : `${year} has 365 days`) : `${year} has 366 days`) : `${year} has 365 days`
+    // return ((year % 4 === 0 && year % 100 !== 0) || (year % 4 === 0 && year % 400 === 0)) ? (`${year} has 366 days`) : (`${year} has 365 days`)
+
+  //   if (year % 4 === 0){
+  //     if (year % 100 === 0){
+  //       if (year % 400 === 0){
+  //         return `${year} has 366 days`
+  //       }
+  //         return `${year} has 365 days`
+  //     }
+  //     return `${year} has 366 days`
+  //   }
+  //   return `${year} has 365 days`
+//   }
+
+//   console.log(yearDays(2000))
+//   console.log(yearDays(1974))
+//   console.log(yearDays(-16))
+
+// function distinct(arr) {
+//     let unique = true
+//     let newArr = [arr[0]]
+//     for (let i = 1; i < arr.length; i++){
+//         for (let j = 0; j < i; j++){
+//             if (arr[j] === arr[i] && i !== j){
+//                 unique = false
+//             }
+//         }
+//         if (unique){
+//             newArr.push(arr[i])
+//         }
+//         unique = true
+//     }
+//     return newArr
+//   }
+
+//   return [...new Set(a)]
+
+//   console.log(distinct ([1,2,1]))
+
+function findSmallestInt(arr) {
+    console.log(arr)
+    arr = arr.sort(function(a, b) {
+        return a - b;
+      })
+    console.log('arr after sort', arr)
+    return arr[0];
+  }
+
+  findSmallestInt([12,9,23,100])
