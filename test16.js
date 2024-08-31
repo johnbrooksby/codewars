@@ -218,13 +218,28 @@
 
 //   console.log(distinct ([1,2,1]))
 
-function findSmallestInt(arr) {
-    console.log(arr)
-    arr = arr.sort(function(a, b) {
-        return a - b;
-      })
-    console.log('arr after sort', arr)
-    return arr[0];
+// function findSmallestInt(arr) {
+//     console.log(arr)
+//     arr = arr.sort(function(a, b) {
+//         return a - b;
+//       })
+//     console.log('arr after sort', arr)
+//     return arr[0];
+//   }
+
+//   findSmallestInt([12,9,23,100])
+
+function isValid(formula){
+    if ((formula.includes(1) && formula.includes(2)) || (formula.includes(3) && formula.includes(4)) || (!formula.includes(7) && !formula.includes(8))){
+        return false
+    }
+    if (formula.includes(5) && formula.includes(6)){
+        return true
+    }
+    if ((!formula.includes(5) && !formula.includes(6)) && (formula.includes(7) || formula.includes(8))){
+        return true
+    }
+    return false
   }
 
-  findSmallestInt([12,9,23,100])
+  console.log(isValid([1,3,5,7]))
