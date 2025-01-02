@@ -229,17 +229,50 @@
 
 //   findSmallestInt([12,9,23,100])
 
-function isValid(formula){
-    if ((formula.includes(1) && formula.includes(2)) || (formula.includes(3) && formula.includes(4)) || (!formula.includes(7) && !formula.includes(8))){
-        return false
-    }
-    if (formula.includes(5) && formula.includes(6)){
-        return true
-    }
-    if ((!formula.includes(5) && !formula.includes(6)) && (formula.includes(7) || formula.includes(8))){
-        return true
-    }
-    return false
-  }
+// function isValid(formula){
+//     if ((formula.includes(1) && formula.includes(2)) || (formula.includes(3) && formula.includes(4)) || (!formula.includes(7) && !formula.includes(8))){
+//         return false
+//     }
+//     if (formula.includes(5) && formula.includes(6)){
+//         return true
+//     }
+//     if ((!formula.includes(5) && !formula.includes(6)) && (formula.includes(7) || formula.includes(8))){
+//         return true
+//     }
+//     return false
+//   }
 
-  console.log(isValid([1,3,5,7]))
+//   console.log(isValid([1,3,5,7]))
+
+// function isTuringEquation(s){
+//     let numbers = s.split(/[+=]/g)
+//     let first = +numbers[0].split('').reverse().join("")
+//     let second = +numbers[1].split('').reverse().join("")
+//     let third = +numbers[2].split('').reverse().join("")
+//     return first + second === third
+//   }
+
+//   console.log(isTuringEquation("10+20=30"))
+
+// console.log("A");
+
+// setTimeout(() => {
+//  console.log("B");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//  console.log("C");
+// }).then(() => {
+//  console.log("D");
+// });
+
+// console.log("E");
+
+// let one = "1"
+// let two ="2"
+// let three = "3"
+
+// setTimeout(()=>{
+//     console.log(one+two)
+// },4000)
+
